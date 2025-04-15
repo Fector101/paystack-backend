@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+p{
+  color: white;
+  margin: 20px;
+  font-size: 25px;
+}
+button#solve-all{
+  background-color: rgb(30, 162, 48);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+button{
+  border: none;
+}
+#root {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #666e80;
+  --small-cube: 37px;
+  --gap: 2px;
+  --cube-size: calc(var(--small-cube) * 3);
+  --padding: 2px;
+  --size: calc(var(--cube-size) * 3 + var(--gap) * 2 + var(--padding) * 2);
+  gap: var(--gap);
+  width: var(--size);
+  padding: var(--padding);
+  max-height: max-content;
+}
+
+div.cubes-box {
+
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--cube-size);
+  height: var(--cube-size);
+  user-select: none;
+
+}
+
+button {
+  display: flex;
+  width: var(--small-cube);
+  height: var(--small-cube);
+  --grey-color: #666e808a;
+  background-color: black;
+  color: rgb(170, 198, 231);
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div.cubes-box button.first-column{
+  /* background-color: pink; */
+}
+div.cubes-box button.first-row{
+  /* background-color: red; */
+}
+
+div.cubes-box button.second-row{
+  /* background-color: green; */
+}
+
+div.cubes-box button.last-row{
+  /* background-color: blue; */
+}
+
+div.cubes-box button:nth-child(2) {
+  border-left: 1px solid var(--grey-color);
+  border-right: 1px solid var(--grey-color);
+}
+
+div.cubes-box button:nth-child(4) {
+  border-block: 1px solid var(--grey-color);
+}
+
+div.cubes-box button:nth-child(5) {
+  border: 1px solid var(--grey-color);
+}
+
+div.cubes-box button:nth-child(6) {
+  border-block: 1px solid var(--grey-color);
+}
+
+div.cubes-box button:nth-child(8) {
+  border-left: 1px solid var(--grey-color);
+  border-right: 1px solid var(--grey-color);
+}
+
+/* button[data-number='4']{
+  background-color: red;
+} */
+
+button[data-number]{
+  /* background-color: orangered; */
+}
