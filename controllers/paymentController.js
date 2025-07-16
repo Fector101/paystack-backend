@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 
 const initializePayment = async (req, res) => {
   const { email, amount } = req.body;
-
+console.log("email-->", email, amount)
   try {
     const response = await fetch('https://api.paystack.co/transaction/initialize', {
       method: 'POST',
