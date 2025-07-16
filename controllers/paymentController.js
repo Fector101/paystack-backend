@@ -14,6 +14,7 @@ console.log("email-->", email, amount)
     });
 
     const data = await response.json();
+    console.log(data)
     res.status(200).json(data);
   } catch (error) {
     res.status(500).json({ error: 'Initialization failed' });
@@ -32,6 +33,7 @@ const verifyPayment = async (req, res) => {
     });
 
     const data = await response.json();
+    console.log(data)
     res.status(200).json(data);
   } catch (error) {
     res.status(500).json({ error: 'Verification failed' });
