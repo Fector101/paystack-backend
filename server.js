@@ -12,3 +12,6 @@ app.use('/api', paymentRoutes);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+//for vercel serverless functions
+module.exports = app;
